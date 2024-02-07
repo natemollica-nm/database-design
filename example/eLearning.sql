@@ -235,18 +235,18 @@ INSERT INTO `PUBLISHER` (`PUB_ID`, `PUB_NAME`, `PUB_ADDR`, `PUB_URL`) VALUES
 
 -- BOOK --
 INSERT INTO `BOOK` (`BK_ISBN`,`BK_INVID`,`BK_REQID`,`AUTH_ID`, `PUB_ID`, `BK_RENTCOST`,`BK_BUYCOST`, `BK_TITLE`, `BK_EDITION`, `BK_URL`,`BK_CATEGORY`) VALUES
-('101','1011','2000001','2123','00001','38.59','122.54','Programming in Java - 101','12', 'https://elearning-itm440/prog-in-java-12', 'Computer Science'),
-('223','1022','2000002','6544','00002','44.58','150.30','Understand Transact-SQL','22', 'https://elearning-itm440/under-trans-sql-22','Computer Science'),
-('1201','1033','2000003','6198','00003','35.69','112.45','Where the Wild Things Are', NULL, 'https://elearning-itm440/fiction/wtwta','Childrens'),
-('0231','1044','2000004','9879','00004','65.99','250.69','Ham on Rye', NULL, 'https://elearning-itm440/fiction/ham-rye-bukowski','Classics');
+('101','1011','2000001','2123','00001','38.59','122.54','Programming in Java - 101','12', 'https://elearning/prog-in-java-12', 'Computer Science'),
+('223','1022','2000002','6544','00002','44.58','150.30','Understand Transact-SQL','22', 'https://elearning/under-trans-sql-22','Computer Science'),
+('1201','1033','2000003','6198','00003','35.69','112.45','Where the Wild Things Are', NULL, 'https://elearning/fiction/wtwta','Childrens'),
+('0231','1044','2000004','9879','00004','65.99','250.69','Ham on Rye', NULL, 'https://elearning/fiction/ham-rye-bukowski','Classics');
 
 -- eLEARNING --
 INSERT INTO `eLEARNING` (`SYS_ID`,`SYS_BILLING`,`SYS_REQRESPONSE`,`SYS_URL`) VALUES
-('72345','eLEARNING BILL INFO', NULL,'https://elearning-itm440');
+('72345','eLEARNING BILL INFO', NULL,'https://elearning');
 
 -- LIBRARY --
 INSERT INTO `LIBRARY` (`LIB_ID`,`LIB_QRESULTS`,`LIB_URL`) VALUES
-('666999', NULL, 'https://elearning-itm440/library');
+('666999', NULL, 'https://elearning/library');
 
 -- LIB_INVENTORY --
 INSERT INTO `LIB_INVENTORY` (`INV_ID`,`INV_LASTUPDATE`) VALUES
