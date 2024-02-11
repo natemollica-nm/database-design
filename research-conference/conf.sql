@@ -25,6 +25,16 @@ CREATE TABLE IF NOT EXISTS Paper (
                        FOREIGN KEY (Contact_Author_Id) REFERENCES Author(Author_Id)
 );
 
+-- Create the Paper_Reviewer_Assignment table
+CREATE TABLE IF NOT EXISTS Paper_Reviewer_Assignment (
+    Paper_Id INT,
+    Reviewer_Id INT,
+    PRIMARY KEY (Paper_Id, Reviewer_Id),
+    FOREIGN KEY (Paper_Id) REFERENCES Paper(Paper_Id),
+    FOREIGN KEY (Reviewer_Id) REFERENCES Reviewer(Reviewer_Id)
+);
+
+
 -- Create the Reviewer table
 CREATE TABLE IF NOT EXISTS Reviewer (
                           Reviewer_Id INT AUTO_INCREMENT PRIMARY KEY,

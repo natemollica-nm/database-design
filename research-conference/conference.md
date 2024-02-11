@@ -32,3 +32,8 @@ Tested on MySQL **_v8.3.0-arm64_**
 24. The ratings provided by reviewers for each paper should fall within the range of 1 to 10.
 25. The database should enforce constraints to ensure that each paper has at least one reviewer assigned to it.
 26. The database should provide functionality to track the status of each paper (e.g., under review, accepted, rejected).
+
+
+## Chen Notation ERD
+
+![](assets/research_conference_erd.png)
