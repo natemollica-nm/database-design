@@ -20,6 +20,23 @@ scalability, customization, security, and accessibility, a well-designed LMS app
 application can significantly enhance the effectiveness and efficiency of online education,
 fostering a culture of continuous learning and innovation in educational institutions.
 
+## Relationships
+
+* **User to Course:** Many-to-Many (Instructors teach many courses; students enroll in many courses)
+* **Course to Module:** One-to-Many (A course contains many modules)
+* **Module to Lesson:** One-to-Many (A module contains many lessons)
+* **Course to Assignment_Quiz:** One-to-Many (A course has many assignments/quizzes)
+* **User to Submission:** One-to-Many (A user can make many submissions, but each submission is made by one user)
+* **Lesson to Content:** One-to-Many (A lesson can have multiple contents)
+* **User to Communication:** Many-to-Many (Users can send messages to many users, and receive from many)
+
+
+## Cardinality and Participation Constraints
+* **User to Course:** (N:M) A user can be associated with multiple courses either as a student, instructor, or both. A course must have at least one instructor but can have many students.
+* **Course to Module, Module to Lesson, Lesson to Content:** (1:N) A parent entity must have at least one child entity but can have many.
+* **Course to Assignment_Quiz:** (1:N) Each course must have at least one assignment or quiz.
+* **User to Submission:** (1:N) A submission must be made by exactly one user, but a user can make multiple submissions.
+
 ## Entities and Their Attributes
 
 ### User Entity
