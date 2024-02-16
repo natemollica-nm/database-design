@@ -1,5 +1,11 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS LMS;
+
+-- Set context to LMS DB
+USE LMS;
+
 -- Creating the Users table
-CREATE TABLE Users (
+CREATE TABLE IF NOT EXISTS Users (
     UserID INT AUTO_INCREMENT PRIMARY KEY,
     Username VARCHAR(255) NOT NULL,
     Password VARCHAR(255) NOT NULL,
@@ -10,7 +16,7 @@ CREATE TABLE Users (
 );
 
 -- Creating the Courses table
-CREATE TABLE Courses (
+CREATE TABLE IF NOT EXISTS Courses (
     CourseID INT AUTO_INCREMENT PRIMARY KEY,
     CourseName VARCHAR(255) NOT NULL,
     Description TEXT,
@@ -21,7 +27,7 @@ CREATE TABLE Courses (
 );
 
 -- Creating the Modules table
-CREATE TABLE Modules (
+CREATE TABLE IF NOT EXISTS Modules (
     ModuleID INT AUTO_INCREMENT PRIMARY KEY,
     CourseID INT,
     ModuleName VARCHAR(255) NOT NULL,
@@ -30,7 +36,7 @@ CREATE TABLE Modules (
 );
 
 -- Creating the Lessons table
-CREATE TABLE Lessons (
+CREATE TABLE IF NOT EXISTS Lessons (
     LessonID INT AUTO_INCREMENT PRIMARY KEY,
     ModuleID INT,
     Title VARCHAR(255) NOT NULL,
@@ -40,7 +46,7 @@ CREATE TABLE Lessons (
 );
 
 -- Creating the Assignment_Quiz table
-CREATE TABLE Assignment_Quiz (
+CREATE TABLE IF NOT EXISTS Assignment_Quiz (
     AQID INT AUTO_INCREMENT PRIMARY KEY,
     CourseID INT,
     Title VARCHAR(255) NOT NULL,
@@ -51,7 +57,7 @@ CREATE TABLE Assignment_Quiz (
 );
 
 -- Creating the Submissions table
-CREATE TABLE Submissions (
+CREATE TABLE IF NOT EXISTS Submissions (
     SubmissionID INT AUTO_INCREMENT PRIMARY KEY,
     AQID INT,
     UserID INT,
@@ -62,7 +68,7 @@ CREATE TABLE Submissions (
 );
 
 -- Creating the Content table
-CREATE TABLE Content (
+CREATE TABLE IF NOT EXISTS Content (
     ContentID INT AUTO_INCREMENT PRIMARY KEY,
     LessonID INT,
     Type ENUM('Document', 'Video', 'Interactive', 'Other') NOT NULL,
@@ -72,7 +78,7 @@ CREATE TABLE Content (
 );
 
 -- Creating the Communication table
-CREATE TABLE Communication (
+CREATE TABLE IF NOT EXISTS Communication (
     MessageID INT AUTO_INCREMENT PRIMARY KEY,
     FromUserID INT,
     ToUserID INT,
