@@ -32,10 +32,22 @@ fostering a culture of continuous learning and innovation in educational institu
 
 
 ## Cardinality and Participation Constraints
-* **User to Course:** (N:M) A user can be associated with multiple courses either as a student, instructor, or both. A course must have at least one instructor but can have many students.
-* **Course to Module, Module to Lesson, Lesson to Content:** (1:N) A parent entity must have at least one child entity but can have many.
-* **Course to Assignment_Quiz:** (1:N) Each course must have at least one assignment or quiz.
-* **User to Submission:** (1:N) A submission must be made by exactly one user, but a user can make multiple submissions.
+* **User to Course:** (N:M) 
+  * A user can be associated with multiple courses either as a student, instructor, or both. 
+  * A course must have at least one instructor but can have many students.
+  * (**Instructor**) - Mandatory
+  * (**Student**) - Optional
+* **Course to Module, Module to Lesson, Lesson to Content:** (1:N) 
+  * A parent entity must have at least one child entity but can have many.
+  * (**Course-to-Module**) - Mandatory
+  * (**Module-to-Lesson**) - Mandatory
+  * (**Lesson-to-Content**) - Optional
+* **Course to Assignment_Quiz:** (1:N) 
+  * Each course must have at least one assignment or quiz.
+  * Mandatory
+* **User to Submission:** (1:N) '
+  * A submission must be made by exactly one user, but a user can make multiple submissions.
+  * Optional
 
 ## Entities and Their Attributes
 
