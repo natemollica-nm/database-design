@@ -46,15 +46,8 @@ specific to instructors.
   * This separation maintains the 3NF by eliminating transitive dependencies within the **Users** table and allows for more detailed information to be stored about instructors without 
 cluttering the Users table.
 
-```mysql
-CREATE TABLE IF NOT EXISTS Instructors (
-    InstructorID INT AUTO_INCREMENT PRIMARY KEY,
-    UserID INT UNIQUE NOT NULL,
-    Bio TEXT,
-    Qualifications TEXT,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE
-);
-```
+https://github.com/natemollica-nm/database-design/blob/a369e23dd484ed3df63cf64b8ae87b4d6dbd25fc/refactoring/database.sql#L19-L25
+
 
 **Courses Table**: 
 
@@ -64,16 +57,6 @@ CREATE TABLE IF NOT EXISTS Instructors (
   accessed or updated.
 
 
-```mysql
-CREATE TABLE IF NOT EXISTS Courses (
-    CourseID INT AUTO_INCREMENT PRIMARY KEY,
-    CourseName VARCHAR(255) NOT NULL,
-    Description TEXT,
-    StartDate DATE,
-    EndDate DATE,
-    InstructorID INT,
-    FOREIGN KEY (InstructorID) REFERENCES Instructors(InstructorID) ON DELETE SET NULL
-);
-```
+https://github.com/natemollica-nm/database-design/blob/a369e23dd484ed3df63cf64b8ae87b4d6dbd25fc/refactoring/database.sql#L28-L36
 
 These adjustments enhance the database schema's adherence to 3NF by ensuring all attributes depend on the primary key, reducing redundancy, and improving the clarity and efficiency of data management within the LMS.
