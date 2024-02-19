@@ -20,6 +20,10 @@ scalability, customization, security, and accessibility, a well-designed LMS app
 application can significantly enhance the effectiveness and efficiency of online education,
 fostering a culture of continuous learning and innovation in educational institutions.
 
+## Learning Management System (LMS)
+
+![LMS](assets/LMS.png)
+
 ## Relationships
 
 * **User to Course:** Many-to-Many (Instructors teach many courses; students enroll in many courses)
@@ -41,7 +45,7 @@ fostering a culture of continuous learning and innovation in educational institu
   * A parent entity must have at least one child entity but can have many.
   * (**Course-to-Module**) - Mandatory
   * (**Module-to-Lesson**) - Mandatory
-  * (**Lesson-to-Content**) - Optional
+  * (**Lesson-to-Content**) - Mandatory
 * **Course to Assignment_Quiz:** (1:N) 
   * Each course must have at least one assignment or quiz.
   * Mandatory
